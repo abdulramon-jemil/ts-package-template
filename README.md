@@ -173,7 +173,7 @@ template. I might not have time to update them.
 ## Contributing
 
 If you would like to contribute to this template, please create an issue about
-it first, and let's talk about it. Thanks in advance.
+it first, and let's talk about it. Thanks.
 
 ## Other templates
 
