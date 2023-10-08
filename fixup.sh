@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Add package.json files to cjs/mjs subtrees
+# Add package.json files to cjs/esm subtrees
 #
 
 cat >dist/cjs/package.json <<!EOF
@@ -9,7 +9,7 @@ cat >dist/cjs/package.json <<!EOF
 }
 !EOF
 
-cat >dist/mjs/package.json <<!EOF
+cat >dist/esm/package.json <<!EOF
 {
   "type": "module"
 }

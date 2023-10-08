@@ -70,21 +70,21 @@ autocomplete features.
 
 This template includes three TSconfig files. There's a base `tsconfig.json` file
 which is extended by two other TSconfig files, namely the `tsconfig.cjs.json`
-and `tsconfig.mjs.json` files. These two files are passed to the Typescript
+and `tsconfig.esm.json` files. These two files are passed to the Typescript
 compiler at build time to create two different builds of the package to support
 `import` and `require` statements on the package's exports. The builds created
 are put in the `dist` folder at the project's root; the commonjs build in
-`dist/cjs`, and the Ecmascript module build in `dist/mjs`.
+`dist/cjs`, and the Ecmascript module build in `dist/esm`.
 
 ## Incuded Scripts
 
 There are a couple of script included in the `package.json`:
 
 - `build`: builds the package, causing typescript to emit files in the
-  `dist/cjs` and `dist/mjs` directories. This also runs the `fixup` script.
+  `dist/cjs` and `dist/esm` directories. This also runs the `fixup` script.
 
 - `fixup`: Runs the [fixup.sh](./fixup.sh) shell script. This creates two
-  separate `package.json` files for the two builds (`dist/cjs` and `dist/mjs`)
+  separate `package.json` files for the two builds (`dist/cjs` and `dist/esm`)
   configuring their types (`"commonjs"` and `"module"` respectively). You can
   learn more about this approach
   [here](https://www.sensedeep.com/blog/posts/2021/how-to-create-single-source-npm-module.html).
